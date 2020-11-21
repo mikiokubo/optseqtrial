@@ -1,0 +1,151 @@
+resource machine[0]  
+ interval 0 inf capacity 1  
+resource machine[1]  
+ interval 0 inf capacity 1  
+resource machine[2]  
+ interval 0 inf capacity 1  
+resource machine[3]  
+ interval 0 inf capacity 1  
+resource machine[4]  
+ interval 0 inf capacity 1  
+resource machine[5]  
+ interval 0 inf capacity 1  
+activity Act[00] 
+ mode  duration 1  
+ machine[0] interval 0 inf requirement 1   
+activity Act[01] 
+ mode  duration 3  
+ machine[1] interval 0 inf requirement 1   
+activity Act[02] 
+ mode  duration 6  
+ machine[2] interval 0 inf requirement 1   
+activity Act[03] 
+ mode  duration 7  
+ machine[3] interval 0 inf requirement 1   
+activity Act[04] 
+ mode  duration 3  
+ machine[4] interval 0 inf requirement 1   
+activity Act[05] 
+ mode  duration 6  
+ machine[5] interval 0 inf requirement 1   
+activity Act[10] 
+ mode  duration 8  
+ machine[0] interval 0 inf requirement 1   
+activity Act[11] 
+ mode  duration 5  
+ machine[1] interval 0 inf requirement 1   
+activity Act[12] 
+ mode  duration 10  
+ machine[2] interval 0 inf requirement 1   
+activity Act[13] 
+ mode  duration 10  
+ machine[3] interval 0 inf requirement 1   
+activity Act[14] 
+ mode  duration 10  
+ machine[4] interval 0 inf requirement 1   
+activity Act[15] 
+ mode  duration 4  
+ machine[5] interval 0 inf requirement 1   
+activity Act[20] 
+ mode  duration 5  
+ machine[0] interval 0 inf requirement 1   
+activity Act[21] 
+ mode  duration 4  
+ machine[1] interval 0 inf requirement 1   
+activity Act[22] 
+ mode  duration 8  
+ machine[2] interval 0 inf requirement 1   
+activity Act[23] 
+ mode  duration 9  
+ machine[3] interval 0 inf requirement 1   
+activity Act[24] 
+ mode  duration 1  
+ machine[4] interval 0 inf requirement 1   
+activity Act[25] 
+ mode  duration 7  
+ machine[5] interval 0 inf requirement 1   
+activity Act[30] 
+ mode  duration 5  
+ machine[0] interval 0 inf requirement 1   
+activity Act[31] 
+ mode  duration 5  
+ machine[1] interval 0 inf requirement 1   
+activity Act[32] 
+ mode  duration 5  
+ machine[2] interval 0 inf requirement 1   
+activity Act[33] 
+ mode  duration 3  
+ machine[3] interval 0 inf requirement 1   
+activity Act[34] 
+ mode  duration 8  
+ machine[4] interval 0 inf requirement 1   
+activity Act[35] 
+ mode  duration 9  
+ machine[5] interval 0 inf requirement 1   
+activity Act[40] 
+ mode  duration 9  
+ machine[0] interval 0 inf requirement 1   
+activity Act[41] 
+ mode  duration 3  
+ machine[1] interval 0 inf requirement 1   
+activity Act[42] 
+ mode  duration 5  
+ machine[2] interval 0 inf requirement 1   
+activity Act[43] 
+ mode  duration 4  
+ machine[3] interval 0 inf requirement 1   
+activity Act[44] 
+ mode  duration 3  
+ machine[4] interval 0 inf requirement 1   
+activity Act[45] 
+ mode  duration 1  
+ machine[5] interval 0 inf requirement 1   
+activity Act[50] 
+ mode  duration 3  
+ machine[0] interval 0 inf requirement 1   
+activity Act[51] 
+ mode  duration 3  
+ machine[1] interval 0 inf requirement 1   
+activity Act[52] 
+ mode  duration 9  
+ machine[2] interval 0 inf requirement 1   
+activity Act[53] 
+ mode  duration 10  
+ machine[3] interval 0 inf requirement 1   
+activity Act[54] 
+ mode  duration 4  
+ machine[4] interval 0 inf requirement 1   
+activity Act[55] 
+ mode  duration 1  
+ machine[5] interval 0 inf requirement 1   
+temporal Act[00] Act[01]  type CS delay 0  
+temporal Act[01] Act[02]  type CS delay 0  
+temporal Act[02] Act[03]  type CS delay 0  
+temporal Act[03] Act[04]  type CS delay 0  
+temporal Act[04] Act[05]  type CS delay 0  
+temporal Act[10] Act[11]  type CS delay 0  
+temporal Act[11] Act[12]  type CS delay 0  
+temporal Act[12] Act[13]  type CS delay 0  
+temporal Act[13] Act[14]  type CS delay 0  
+temporal Act[14] Act[15]  type CS delay 0  
+temporal Act[20] Act[21]  type CS delay 0  
+temporal Act[21] Act[22]  type CS delay 0  
+temporal Act[22] Act[23]  type CS delay 0  
+temporal Act[23] Act[24]  type CS delay 0  
+temporal Act[24] Act[25]  type CS delay 0  
+temporal Act[30] Act[31]  type CS delay 0  
+temporal Act[31] Act[32]  type CS delay 0  
+temporal Act[32] Act[33]  type CS delay 0  
+temporal Act[33] Act[34]  type CS delay 0  
+temporal Act[34] Act[35]  type CS delay 0  
+temporal Act[40] Act[41]  type CS delay 0  
+temporal Act[41] Act[42]  type CS delay 0  
+temporal Act[42] Act[43]  type CS delay 0  
+temporal Act[43] Act[44]  type CS delay 0  
+temporal Act[44] Act[45]  type CS delay 0  
+temporal Act[50] Act[51]  type CS delay 0  
+temporal Act[51] Act[52]  type CS delay 0  
+temporal Act[52] Act[53]  type CS delay 0  
+temporal Act[53] Act[54]  type CS delay 0  
+temporal Act[54] Act[55]  type CS delay 0  
+activity sink duedate 0 

@@ -1,0 +1,5 @@
+,pred,succ,type,delay
+0,Act[1]_,Act[3]_,CS,0
+1,Act[2]_,Act[4]_,CS,0
+2,Act[2]_,Act[5]_,CS,0
+3,Act[3]_,Act[4]_,CS,0

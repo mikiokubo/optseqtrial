@@ -1,0 +1,9 @@
+,mode,resource,type,requirement
+0,Mode[1],writer,,"{(0, 'inf'): 1}"
+1,Mode[1],writer,break,"{(0, 'inf'): 1}"
+2,Mode[2],writer,,"{(0, 'inf'): 1}"
+3,Mode[2],writer,break,"{(0, 'inf'): 1}"
+4,Mode[3],writer,,"{(0, 'inf'): 1}"
+5,Mode[3],writer,break,"{(0, 'inf'): 1}"
+6,Mode[4],writer,,"{(0, 'inf'): 1}"
+7,Mode[4],writer,break,"{(0, 'inf'): 1}"

@@ -1,0 +1,11 @@
+,mode,resource,type,requirement
+0,Mode[1],worker,max,"{(0, 'inf'): 1}"
+1,Mode[2],worker,,"{(0, 'inf'): 1}"
+2,Mode[3],worker,,"{(0, 'inf'): 1}"
+3,Mode[4],worker,,"{(0, 'inf'): 1}"
+4,Mode[5],worker,,"{(0, 'inf'): 1}"
+5,Mode[6],worker,,"{(0, 'inf'): 1}"
+6,Mode[7],worker,,"{(0, 'inf'): 1}"
+7,Mode[8],worker,,"{(0, 'inf'): 1}"
+8,Mode[9],worker,,"{(0, 'inf'): 1}"
+9,Mode[10],worker,,"{(0, 'inf'): 1}"

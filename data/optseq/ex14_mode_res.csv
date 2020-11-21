@@ -1,0 +1,3 @@
+,mode,resource,type,requirement
+0,DumMode1,Tank1,break,"{(0, 'inf'): 1}"
+1,DumMode2,Tank2,break,"{(0, 'inf'): 1}"

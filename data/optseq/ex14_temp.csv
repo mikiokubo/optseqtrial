@@ -1,0 +1,6 @@
+,pred,succ,type,delay
+0,Act[1],actDum,SS,0
+1,actDum,Act[1],SS,0
+2,Act[2],actDum,CC,0
+3,actDum,Act[2],CC,0
+4,Act[1],Act[2],SS,3

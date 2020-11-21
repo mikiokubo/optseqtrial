@@ -1,0 +1,9 @@
+,mode,resource,type,requirement
+0,Mode_D,line1,,"{(0, 'inf'): 1}"
+1,Mode_E,line1,,"{(0, 'inf'): 1}"
+2,Mode_F,line1,,"{(0, 'inf'): 1}"
+3,Mode_setup_E_D,line1,,"{(0, 50): 1}"
+4,Mode_setup_D_E,line1,,"{(0, 10): 1}"
+5,Mode_setup_F_E,line1,,"{(0, 10): 1}"
+6,Mode_setup_start_E,line1,,"{(0, 10): 1}"
+7,Mode_setup_E_F,line1,,"{(0, 10): 1}"

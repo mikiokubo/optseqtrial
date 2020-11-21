@@ -1,0 +1,7 @@
+,name,duedate,backward,weight,autoselect
+0,Act_D,inf,False,1,False
+1,Act_E,inf,False,1,False
+2,Act_F,inf,False,1,False
+3,Setup_D,inf,False,1,True
+4,Setup_E,inf,False,1,True
+5,Setup_F,inf,False,1,True

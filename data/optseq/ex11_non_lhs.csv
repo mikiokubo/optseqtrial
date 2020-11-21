@@ -1,0 +1,5 @@
+,res_name,term,act_name,mode_name
+0,budget_constraint,1,Act[1][2],Express
+1,budget_constraint,1,Act[2][3],Express
+2,budget_constraint,1,Act[3][3],Express
+3,budget_constraint,1,Act[4][1],Express

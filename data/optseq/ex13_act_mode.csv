@@ -1,0 +1,13 @@
+,activity,mode
+0,Act_D,Mode_D
+1,Act_E,Mode_E
+2,Act_F,Mode_F
+3,Setup_D,Mode_setup_E_D
+4,Setup_D,Mode_setup_start_D
+5,Setup_D,Mode_setup_F_D
+6,Setup_E,Mode_setup_D_E
+7,Setup_E,Mode_setup_F_E
+8,Setup_E,Mode_setup_start_E
+9,Setup_F,Mode_setup_E_F
+10,Setup_F,Mode_setup_start_F
+11,Setup_F,Mode_setup_D_F

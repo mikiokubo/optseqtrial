@@ -1,0 +1,13 @@
+,pred,succ,type,delay
+0,Act[1][1],Act[1][2],CS,0
+1,Act[1][2],Act[1][3],CS,0
+2,Act[2][1],Act[2][2],CS,0
+3,Act[2][2],Act[2][3],CS,0
+4,Act[3][1],Act[3][2],CS,0
+5,Act[3][2],Act[3][3],CS,0
+6,Act[4][1],Act[4][2],CS,0
+7,Act[4][2],Act[4][3],CS,0
+8,Act[1][1],dummy_activity,CS,0
+9,dummy_activity,Act[1][1],SC,0
+10,dummy_activity,Act[2][2],CS,0
+11,Act[2][2],dummy_activity,SC,0

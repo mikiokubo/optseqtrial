@@ -1,0 +1,7 @@
+,pred,succ,type,delay
+0,Setup_D,Act_D,CS,0
+1,Act_D,Setup_D,SC,0
+2,Setup_E,Act_E,CS,0
+3,Act_E,Setup_E,SC,0
+4,Setup_F,Act_F,CS,0
+5,Act_F,Setup_F,SC,0

@@ -1,0 +1,5 @@
+# reading data ... done: 0.00(s)
+
+The number of activities is limited to 15
+
+no feasible schedule found.

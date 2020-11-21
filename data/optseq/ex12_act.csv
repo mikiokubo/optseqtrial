@@ -1,0 +1,10 @@
+,name,duedate,backward,weight,autoselect
+0,act0,0,False,1,True
+1,act1,1,False,1,True
+2,act2,2,False,1,True
+3,act3,3,False,1,True
+4,act4,4,False,1,True
+5,act5,5,False,1,True
+6,act6,6,False,1,True
+7,act7,7,False,1,True
+8,act8,8,False,1,True
