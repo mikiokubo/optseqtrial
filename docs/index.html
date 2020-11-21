@@ -44,7 +44,7 @@ nb_path: "index.ipynb"
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li>Clone from github:<blockquote><p><code>!git clone https://github.com/mikiokubo/scoptrial.git</code></p>
+<li>Clone from github:<blockquote><p><code>!git clone https://github.com/mikiokubo/optseqtrial.git</code></p>
 </blockquote>
 </li>
 <li><p>Move to scoptrial directry:</p>
@@ -54,16 +54,16 @@ nb_path: "index.ipynb"
 <li><p>Change mode of execution file</p>
 <ul>
 <li><p>for linux (Google Colab.)</p>
-<blockquote><p><code>!chmod +x scop-linux</code></p>
+<blockquote><p><code>!chmod +x optseq-linux</code></p>
 </blockquote>
 </li>
 <li><p>for Mac</p>
-<blockquote><p><code>!chmod +x scop-max</code></p>
+<blockquote><p><code>!chmod +x optseq-mac</code></p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li><p>Import package and write a code:&gt; <code>from scoptrial.scop import *</code></p>
+<li><p>Import package and write a code:&gt; <code>from optseqtrial.scop import *</code></p>
 </li>
 <li>(Option) Install other packages if necessarily: </li>
 </ol>
@@ -81,6 +81,69 @@ nb_path: "index.ipynb"
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">optseqtrial.optseq</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">()</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">22</span><span class="p">}</span>
+<span class="n">act</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">res</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">addResource</span><span class="p">(</span><span class="s2">&quot;worker&quot;</span><span class="p">,</span><span class="n">capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">duration</span><span class="p">:</span>
+    <span class="n">act</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">addActivity</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Act[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
+    <span class="n">mode</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Mode</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mode[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">,</span> <span class="n">duration</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">mode</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">addResource</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">requirement</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">act</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">addModes</span><span class="p">(</span><span class="n">mode</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        
+<span class="c1"># temporal (precedense) constraints</span>
+<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">delay</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">delay</span> <span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">TimeLimit</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">Makespan</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+ ================ Now solving the problem ================ 
+
+
+Solutions:
+    source   ---     0     0
+      sink   ---   122   122
+    Act[1]   ---     0    13
+    Act[2]   ---    33    58
+    Act[3]   ---    58    73
+    Act[4]   ---    95   122
+    Act[5]   ---    73    95
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 

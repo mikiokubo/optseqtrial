@@ -1,5 +1,35 @@
 # reading data ... done: 0.00(s)
+# random seed: 1
+# tabu tenure: 1
+# cpu time limit: 1.00(s)
+# iteration limit: 1073741823
+# computing all-pairs longest paths and strongly connected components ... done
+#scc 7
+objective value = 122 (cpu time = 0.00(s), iteration = 0)
+0: 0.00(s): 122/122
 
-The number of activities is limited to 15
+--- best solution ---
+source,---, 0 0
+sink,---, 122 122
+Act[1],---, 0 0--13 13
+Act[2],---, 33 33--58 58
+Act[3],---, 58 58--73 73
+Act[4],---, 95 95--122 122
+Act[5],---, 73 73--95 95
+--- tardy activity ---
+sink: 122
+--- resource residuals ---
+worker: [0,13] 0 [13,33] 1 [33,122] 0 
 
-no feasible schedule found.
+--- best activity list ---
+source ---
+Act[1] ---
+Act[2] ---
+Act[3] ---
+Act[5] ---
+Act[4] ---
+sink ---
+
+objective value = 122
+cpu time = 0.00/1.00(s)
+iteration = 0/117317
