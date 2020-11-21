@@ -8,8 +8,8 @@
 
 1. Clone from github:
 > `!git clone https://github.com/mikiokubo/optseqtrial.git`
-2. Move to scoptrial directry:
-> `cd scoptrial`
+2. Move to optseq trial directry:
+> `cd optseqtrial`
 
 3. Change mode of execution file
 
