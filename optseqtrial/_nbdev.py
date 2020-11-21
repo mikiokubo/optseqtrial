@@ -28,10 +28,7 @@ index = {"folder": "07optseq.ipynb",
          "ex13": "07optseq.ipynb",
          "ex14": "07optseq.ipynb",
          "ex15": "07optseq.ipynb",
-         "ex16": "07optseq.ipynb",
-         "convert": "07optseq.ipynb",
-         "optimize_optseq": "07optseq.ipynb",
-         "make_result_df": "07optseq.ipynb"}
+         "ex16": "07optseq.ipynb"}
 
 modules = ["optseq.py"]
 
