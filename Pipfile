@@ -10,6 +10,7 @@ nbdev = "*"
 jupyterlab = "*"
 pandas = "*"
 plotly = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.8"

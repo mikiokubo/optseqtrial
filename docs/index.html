@@ -65,10 +65,14 @@ nb_path: "index.ipynb"
 </li>
 <li><p>Import package and write a code:&gt; <code>from optseqtrial.scop import *</code></p>
 </li>
-<li>(Option) Install other packages if necessarily: </li>
-</ol>
-<blockquote><p><code>!pip install plotly</code></p>
+<li><p>(Option) Install other packages if necessarily:</p>
+<blockquote><p><code>!pip install plotly pandas matplotlib</code></p>
 </blockquote>
+</li>
+<li><p>(Option) If you have already installed pipenv:&gt; <code>pipenv install</code> and then `pipenv shell'
+then, you can install the development packages and run them in virtual environment.</p>
+</li>
+</ol>
 
 </div>
 </div>
@@ -89,24 +93,39 @@ nb_path: "index.ipynb"
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">optseqtrial.optseq</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Example 1</span>
+<span class="sd">PERT</span>
+<span class="sd">file name: Example1.py</span>
+<span class="sd">Copyright Log Opt Co., Ltd.</span>
+
+<span class="sd">Consider a 5-activity problem with precedence constraints between the activities.</span>
+<span class="sd">Such a problem is called PERT (Program Evaluation and Review Technique).</span>
+<span class="sd">The processing times (durations) of the activities are kept in the dictionary</span>
+<span class="sd"> duration ={1:13, 2:25, 3:15, 4:27, 5:22 }.</span>
+<span class="sd">Precedence constraints are given by:</span>
+<span class="sd"> Activity 1 -&gt; Activity 3; Activity 2 -&gt; Activity 4;</span>
+<span class="sd"> Activity 3 -&gt; Activity 4; and Activity 3 -&gt; Activity 5.</span>
+<span class="sd">The objective is to find the maximum completion time (makespan) for all 5 activities.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
 <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">()</span>
 <span class="n">duration</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">22</span><span class="p">}</span>
 <span class="n">act</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">mode</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">res</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">addResource</span><span class="p">(</span><span class="s2">&quot;worker&quot;</span><span class="p">,</span><span class="n">capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">duration</span><span class="p">:</span>
-    <span class="n">act</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">addActivity</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Act[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
-    <span class="n">mode</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Mode</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mode[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">,</span> <span class="n">duration</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">mode</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">addResource</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">requirement</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">act</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">addActivity</span><span class="p">(</span><span class="s2">&quot;Act[</span><span class="si">{0}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">mode</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Mode</span><span class="p">(</span><span class="s2">&quot;Mode[</span><span class="si">{0}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">duration</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     <span class="n">act</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">addModes</span><span class="p">(</span><span class="n">mode</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        
-<span class="c1"># temporal (precedense) constraints</span>
-<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">delay</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">delay</span> <span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
+<span class="c1"># temporal (precedense) constraints</span>
+<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">model</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">act</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">TimeLimit</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">Makespan</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">TimeLimit</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">model</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">Makespan</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">()</span>
@@ -128,12 +147,12 @@ nb_path: "index.ipynb"
 
 Solutions:
     source   ---     0     0
-      sink   ---   122   122
+      sink   ---    55    55
     Act[1]   ---     0    13
-    Act[2]   ---    33    58
-    Act[3]   ---    58    73
-    Act[4]   ---    95   122
-    Act[5]   ---    73    95
+    Act[2]   ---     0    25
+    Act[3]   ---    13    28
+    Act[4]   ---    28    55
+    Act[5]   ---    25    47
 </pre>
 </div>
 </div>

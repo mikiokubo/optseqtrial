@@ -5,31 +5,29 @@
 # iteration limit: 1073741823
 # computing all-pairs longest paths and strongly connected components ... done
 #scc 7
-objective value = 122 (cpu time = 0.00(s), iteration = 0)
-0: 0.00(s): 122/122
-
+objective value = 55 (cpu time = 0.00(s), iteration = 0)
+0: 0.00(s): 55/55
 --- best solution ---
 source,---, 0 0
-sink,---, 122 122
+sink,---, 55 55
 Act[1],---, 0 0--13 13
-Act[2],---, 33 33--58 58
-Act[3],---, 58 58--73 73
-Act[4],---, 95 95--122 122
-Act[5],---, 73 73--95 95
+Act[2],---, 0 0--25 25
+Act[3],---, 13 13--28 28
+Act[4],---, 28 28--55 55
+Act[5],---, 25 25--47 47
 --- tardy activity ---
-sink: 122
+sink: 55
 --- resource residuals ---
-worker: [0,13] 0 [13,33] 1 [33,122] 0 
 
 --- best activity list ---
 source ---
-Act[1] ---
 Act[2] ---
-Act[3] ---
 Act[5] ---
+Act[1] ---
+Act[3] ---
 Act[4] ---
 sink ---
 
-objective value = 122
+objective value = 55
 cpu time = 0.00/1.00(s)
-iteration = 0/117317
+iteration = 1/57500

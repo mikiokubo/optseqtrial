@@ -1,23 +1,15 @@
-resource worker  
- interval 0 inf capacity 1  
 activity Act[1] 
- mode  duration 13  
- worker interval 0 inf requirement 1   
+ mode  duration 13   
 activity Act[2] 
- mode  duration 25  
- worker interval 0 inf requirement 1   
+ mode  duration 25   
 activity Act[3] 
- mode  duration 15  
- worker interval 0 inf requirement 1   
+ mode  duration 15   
 activity Act[4] 
- mode  duration 27  
- worker interval 0 inf requirement 1   
+ mode  duration 27   
 activity Act[5] 
- mode  duration 22  
- worker interval 0 inf requirement 1   
-temporal Act[1] Act[2]  type CS delay 20  
-temporal Act[1] Act[3]  type CS delay 20  
-temporal Act[2] Act[4]  type CS delay 10  
-temporal Act[2] Act[5]  type CS delay 8  
-temporal Act[3] Act[4]  type CS delay 10  
+ mode  duration 22   
+temporal Act[1] Act[3]  type CS delay 0  
+temporal Act[2] Act[4]  type CS delay 0  
+temporal Act[2] Act[5]  type CS delay 0  
+temporal Act[3] Act[4]  type CS delay 0  
 activity sink duedate 0 
