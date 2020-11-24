@@ -2066,7 +2066,7 @@ def ex14():
     return m
 
 # Cell
-def ex15(fname = "../data/optseq/ft06.txt"):
+def ex15(fname = "data/optseq/ft06.txt"):
     """
     ジョブショップスケジューリング問題のベンチマーク問題例
     """
