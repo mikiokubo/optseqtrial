@@ -2,8 +2,7 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"folder": "07optseq.ipynb",
-         "plot_optseq": "07optseq.ipynb",
+index = {"plot_optseq": "07optseq.ipynb",
          "Parameters": "07optseq.ipynb",
          "Mode": "07optseq.ipynb",
          "Activity": "07optseq.ipynb",

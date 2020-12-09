@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "optseqtrial"
+version = "0.1.0"
+description = ""
+authors = ["scmopt <kubomikio@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+plotly = "^4.14.0"
+pandas = "^1.1.5"
+numpy = "^1.19.4"
+jupyterlab = "^2.2.9"
+nbdev = "^1.1.5"
+matplotlib = "^3.3.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

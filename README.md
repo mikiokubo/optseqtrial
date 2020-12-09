@@ -21,11 +21,8 @@
 
 4. Import package and write a code:> `from optseqtrial.scop import *`
 5. (Option) Install other packages if necessarily: 
-> `!pip install plotly pandas matplotlib`
 
-6. (Option) If you have already installed pipenv:> `pipenv install` and then `pipenv shell'
-then, you can install the development packages and run them in virtual environment. 
-
+> `!pip install plotly pandas numpy matplotlib`
 
 
 ## How to use
