@@ -30,4 +30,4 @@ sink ---
 
 objective value = 1
 cpu time = 0.00/1.00(s)
-iteration = 0/56450
+iteration = 1/87800

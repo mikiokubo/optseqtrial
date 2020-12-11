@@ -1746,7 +1746,7 @@ sink ---
 
 objective value = 102
 cpu time = 0.00/1.00(s)
-iteration = 0/60807
+iteration = 1/75953
 
 
 Solutions:
@@ -1934,50 +1934,50 @@ objective value = 14 (cpu time = 0.00(s), iteration = 0)
 source,---, 0 0
 sink,---, 14 14
 Act[1],---, 0 0--3 3
-Act[2],---, 0 0--2 2
+Act[2],---, 6 6--8 8
 Act[3],---, 0 0--2 2
-Act[4],---, 2 2--4 4
-Act[5],---, 8 8--12 12
-Act[6],---, 4 4--8 8
-Act[7],---, 8 8--12 12
-Act[8],---, 4 4--8 8
+Act[4],---, 0 0--2 2
+Act[5],---, 2 2--6 6
+Act[6],---, 6 6--10 10
+Act[7],---, 2 2--6 6
+Act[8],---, 8 8--12 12
 Act[9],---, 3 3--14 14
 Act[10],---, 12 12--14 14
 --- tardy activity ---
 sink: 14
 --- resource residuals ---
-worker: [0,2] 0 [2,4] 1 [4,12] 0 [12,14] 1 
+worker: [0,8] 0 [8,13] 1 [13,17] 2 
 
 --- best activity list ---
 source ---
-Act[1] ---
-Act[2] ---
-Act[9] ---
 Act[3] ---
+Act[1] ---
+Act[9] ---
 Act[4] ---
-Act[8] ---
-Act[6] ---
 Act[5] ---
 Act[7] ---
+Act[6] ---
+Act[2] ---
+Act[8] ---
 Act[10] ---
 sink ---
 
 objective value = 14
 cpu time = 0.00/1.00(s)
-iteration = 0/12114
+iteration = 1/17405
 
 
 Solutions:
     source   ---     0     0
       sink   ---    14    14
     Act[1]   ---     0     3
-    Act[2]   ---     0     2
+    Act[2]   ---     6     8
     Act[3]   ---     0     2
-    Act[4]   ---     2     4
-    Act[5]   ---     8    12
-    Act[6]   ---     4     8
-    Act[7]   ---     8    12
-    Act[8]   ---     4     8
+    Act[4]   ---     0     2
+    Act[5]   ---     2     6
+    Act[6]   ---     6    10
+    Act[7]   ---     2     6
+    Act[8]   ---     8    12
     Act[9]   ---     3    14
    Act[10]   ---    12    14
 </pre>
@@ -2135,56 +2135,56 @@ output:
 #scc 12
 objective value = 14 (cpu time = 0.00(s), iteration = 0)
 0: 0.00(s): 14/14
-objective value = 13 (cpu time = 0.00(s), iteration = 6)
+objective value = 13 (cpu time = 0.00(s), iteration = 7)
 
 --- best solution ---
 source,---, 0 0
 sink,---, 13 13
 Act[1],Mode[1_3], 0 0--1 1
-Act[2],---, 1 1--3 3
-Act[3],---, 11 11--13 13
+Act[2],---, 11 11--13 13
+Act[3],---, 1 1--3 3
 Act[4],---, 1 1--3 3
 Act[5],---, 3 3--7 7
 Act[6],---, 7 7--11 11
-Act[7],---, 3 3--7 7
-Act[8],---, 7 7--11 11
+Act[7],---, 7 7--11 11
+Act[8],---, 3 3--7 7
 Act[9],---, 1 1--12 12
 Act[10],---, 11 11--13 13
 --- tardy activity ---
 sink: 13
 --- resource residuals ---
-worker: [0,12] 0 [12,13] 1 
+worker: [0,7] 0 [7,13] 1 
 
 --- best activity list ---
 source ---
 Act[1] Mode[1_3]
-Act[2] ---
+Act[3] ---
 Act[4] ---
-Act[7] ---
+Act[8] ---
 Act[5] ---
 Act[9] ---
 Act[6] ---
-Act[8] ---
-Act[3] ---
+Act[7] ---
+Act[2] ---
 Act[10] ---
 sink ---
 
 objective value = 13
 cpu time = 0.00/1.00(s)
-iteration = 6/10255
+iteration = 8/16503
 
 
 Solutions:
     source   ---     0     0
       sink   ---    13    13
     Act[1] Mode[1_3]     0     1
-    Act[2]   ---     1     3
-    Act[3]   ---    11    13
+    Act[2]   ---    11    13
+    Act[3]   ---     1     3
     Act[4]   ---     1     3
     Act[5]   ---     3     7
     Act[6]   ---     7    11
-    Act[7]   ---     3     7
-    Act[8]   ---     7    11
+    Act[7]   ---     7    11
+    Act[8]   ---     3     7
     Act[9]   ---     1    12
    Act[10]   ---    11    13
 </pre>
@@ -2301,6 +2301,7 @@ output:
 #scc 6
 objective value = 6 (cpu time = 0.00(s), iteration = 0)
 0: 0.00(s): 6/6
+
 --- best solution ---
 source,---, 0 0
 sink,---, 6 6
@@ -2317,13 +2318,13 @@ worker: [0,6] 0
 source ---
 Act[1] ---
 Act[2] ---
-Act[3] ---
 Act[4] ---
+Act[3] ---
 sink ---
 
 objective value = 6
 cpu time = 0.00/1.00(s)
-iteration = 1/41312
+iteration = 1/50687
 
 
 Solutions:
@@ -2430,8 +2431,9 @@ output:
 # iteration limit: 1073741823
 # computing all-pairs longest paths and strongly connected components ... done
 #scc 6
-objective value = 3 (cpu time = 0.00(s), iteration = 0)
-0: 0.00(s): 3/3
+objective value = 5 (cpu time = 0.00(s), iteration = 0)
+0: 0.00(s): 5/5
+objective value = 3 (cpu time = 0.00(s), iteration = 1)
 
 --- best solution ---
 source,---, 0 0
@@ -2456,7 +2458,7 @@ sink ---
 
 objective value = 3
 cpu time = 0.00/1.00(s)
-iteration = 0/56613
+iteration = 2/82109
 
 
 Solutions:
@@ -2597,7 +2599,7 @@ Act[1]_,Mode[1][2], 0 0--10 10
 Act[2]_,Mode[2][2], 0 0--20 20
 Act[3]_,Mode[3][2], 10 10--20 20
 Act[4]_,Mode[4][2], 20 20--45 45
-Act[5]_,Mode[5][1], 20 20--42 42
+Act[5]_,Mode[5][2], 20 20--40 40
 --- tardy activity ---
 sink: 45
 --- resource residuals ---
@@ -2605,7 +2607,7 @@ sink: 45
 --- best activity list ---
 source ---
 Act[2]_ Mode[2][2]
-Act[5]_ Mode[5][1]
+Act[5]_ Mode[5][2]
 Act[1]_ Mode[1][2]
 Act[3]_ Mode[3][2]
 Act[4]_ Mode[4][2]
@@ -2613,7 +2615,7 @@ sink ---
 
 objective value = 45
 cpu time = 0.00/1.00(s)
-iteration = 0/128981
+iteration = 1/131093
 
 
 Solutions:
@@ -2623,7 +2625,7 @@ Solutions:
    Act[2]_ Mode[2][2]     0    20
    Act[3]_ Mode[3][2]    10    20
    Act[4]_ Mode[4][2]    20    45
-   Act[5]_ Mode[5][1]    20    42
+   Act[5]_ Mode[5][2]    20    40
 </pre>
 </div>
 </div>
@@ -2746,14 +2748,14 @@ sink: 92
 source ---
 Act[2] ---
 Act[1] ---
-Act[3] ---
 Act[5] ---
+Act[3] ---
 Act[4] ---
 sink ---
 
 objective value = 92
 cpu time = 0.00/1.00(s)
-iteration = 0/85706
+iteration = 1/328842
 
 
 Solutions:
@@ -2882,9 +2884,8 @@ output:
 # iteration limit: 1073741823
 # computing all-pairs longest paths and strongly connected components ... done
 #scc 6
-objective value = 15 (cpu time = 0.00(s), iteration = 0)
-0: 0.00(s): 15/15
-objective value = 11 (cpu time = 0.00(s), iteration = 1)
+objective value = 11 (cpu time = 0.00(s), iteration = 0)
+0: 0.00(s): 11/11
 
 --- best solution ---
 source,---, 0 0
@@ -2908,7 +2909,7 @@ sink ---
 
 objective value = 11
 cpu time = 0.00/1.00(s)
-iteration = 2/47688
+iteration = 1/35373
 
 
 Solutions:
@@ -3025,61 +3026,63 @@ output:
 # tabu tenure: 1
 # cpu time limit: 1.00(s)
 # iteration limit: 1073741823
+WARNING: maxNumParallel modified (mode_Act[1])
+	interval 2 2 max 2
 # computing all-pairs longest paths and strongly connected components ... done
 #scc 12
 objective value = 14 (cpu time = 0.00(s), iteration = 0)
 0: 0.00(s): 14/14
-objective value = 13 (cpu time = 0.00(s), iteration = 5)
-objective value = 12 (cpu time = 0.01(s), iteration = 70)
+objective value = 13 (cpu time = 0.00(s), iteration = 2)
+objective value = 12 (cpu time = 0.00(s), iteration = 37)
 
 --- best solution ---
 source,---, 0 0
 sink,---, 12 12
 Act[1],---, 0 0--1[3] 1
-Act[2],---, 10 10--12 12
-Act[3],---, 0 0--2 2
+Act[2],---, 0 0--2 2
+Act[3],---, 10 10--12 12
 Act[4],---, 0 0--2 2
-Act[5],---, 2 2--6 6
-Act[6],---, 6 6--10 10
-Act[7],---, 6 6--10 10
-Act[8],---, 2 2--6 6
+Act[5],---, 6 6--10 10
+Act[6],---, 2 2--6 6
+Act[7],---, 2 2--6 6
+Act[8],---, 6 6--10 10
 Act[9],---, 1 1--12 12
 Act[10],---, 10 10--12 12
 --- tardy activity ---
 sink: 12
 --- resource residuals ---
-worker: [0,12] 0 
+worker: [0,10] 0 [10,12] 1 
 
 --- best activity list ---
 source ---
 Act[4] ---
-Act[8] ---
+Act[6] ---
 Act[1] ---
 Act[9] ---
-Act[3] ---
-Act[5] ---
-Act[6] ---
 Act[7] ---
 Act[2] ---
+Act[8] ---
+Act[5] ---
+Act[3] ---
 Act[10] ---
 sink ---
 
 objective value = 12
-cpu time = 0.01/1.00(s)
-iteration = 70/10017
+cpu time = 0.00/1.00(s)
+iteration = 38/17114
 
 
 Solutions:
     source   ---     0     0
       sink   ---    12    12
     Act[1]   ---     0     1
-    Act[2]   ---    10    12
-    Act[3]   ---     0     2
+    Act[2]   ---     0     2
+    Act[3]   ---    10    12
     Act[4]   ---     0     2
-    Act[5]   ---     2     6
-    Act[6]   ---     6    10
-    Act[7]   ---     6    10
-    Act[8]   ---     2     6
+    Act[5]   ---     6    10
+    Act[6]   ---     2     6
+    Act[7]   ---     2     6
+    Act[8]   ---     6    10
     Act[9]   ---     1    12
    Act[10]   ---    10    12
 </pre>
@@ -3251,72 +3254,72 @@ output:
 objective value = 50 (cpu time = 0.00(s), iteration = 0)
 0: 0.00(s): 50/50
 objective value = 47 (cpu time = 0.00(s), iteration = 1)
-objective value = 45 (cpu time = 0.00(s), iteration = 2)
-objective value = 39 (cpu time = 0.00(s), iteration = 3)
-objective value = 38 (cpu time = 0.00(s), iteration = 7)
+objective value = 44 (cpu time = 0.00(s), iteration = 2)
+objective value = 41 (cpu time = 0.00(s), iteration = 3)
+objective value = 38 (cpu time = 0.00(s), iteration = 4)
 
 --- best solution ---
 source,---, 0 0
 sink,---, 38 38
-Act[1][1],---, 2 2--3[2] 3--8 8
-Act[1][2],Mode[1][2], 8 8--9 10--19 19
+Act[1][1],---, 3 3--4[2] 4--9 9
+Act[1][2],Mode[1][2], 10 10--20 20
 Act[1][3],---, 32 32--33 35--38 38
 Act[2][1],---, 0 0--9 9
 Act[2][2],---, 9 9--10[2] 10--13 13
 Act[2][3],Mode[2][3], 21 21--32 32
-Act[3][1],---, 14 14--15[2] 15--16 16
+Act[3][1],---, 0 0--3 3
 Act[3][2],---, 23 23--32 32
 Act[3][3],Express, 32 32--33 35--38 38
-Act[4][1],Mode[4][1], 0 0--6 6
+Act[4][1],Mode[4][1], 2 2--3 4--9 9
 Act[4][2],---, 10 10--23 23
 Act[4][3],---, 23 23--32 32
-dummy_activity,---, 8 9
+dummy_activity,---, 9 9
 --- tardy activity ---
 sink: 38
 --- resource residuals ---
-machine[1]: [0,2] 1 [2,13] 0 [13,14] 1 [14,16] 0 [16,23] 1 [23,32] 0 [32,1073741823] 1 
-machine[2]: [0,6] 0 [6,8] 1 [8,9] 0 [9,10] 1 [10,19] 0 [19,21] 1 [21,33] 0 [33,35] 1 [35,38] 0 
-machine[3]: [0,9] 0 [9,10] 1 [10,33] 0 [33,35] 1 [35,38] 0 
-manpower: [0,3] 0 [3,5] 2 [5,7] 0 [7,8] 2 [8,9] 1 [9,11] 0 [11,12] 1 [12,15] 0 [15,19] 2 [19,21] 0 [21,23] 1 [23,25] 0 [25,26] 2 [26,28] 0 [28,32] 2 [32,36] 0 [36,40] 2 
+machine[1]: [0,13] 0 [13,35] 1 [35,43] 0 
+machine[2]: [0,2] 1 [2,3] 0 [3,4] 1 [4,9] 0 [9,10] 1 [10,20] 0 [20,21] 1 [21,33] 0 [33,36] 1 [36,39] 0 
+machine[3]: [0,9] 0 [9,10] 1 [10,19] 0 [19,21] 1 [21,34] 0 [34,36] 1 [36,40] 0 
+manpower: [0,2] 0 [2,3] 1 [3,4] 0 [4,5] 1 [5,7] 0 [7,9] 2 [9,14] 0 [14,19] 2 [19,23] 0 [23,26] 2 [26,28] 0 [28,32] 2 [32,33] 1 [33,37] 0 [37,38] 1 
 
 --- best activity list ---
 source ---
-Act[4][1] Mode[4][1]
 Act[2][1] ---
+Act[3][1] ---
 Act[1][1] ---
 dummy_activity ---
 Act[2][2] ---
-Act[3][1] ---
-Act[1][2] Mode[1][2]
-Act[2][3] Mode[2][3]
+Act[4][1] Mode[4][1]
 Act[4][2] ---
 Act[3][2] ---
-Act[4][3] ---
-Act[1][3] ---
 Act[3][3] Express
+Act[1][2] Mode[1][2]
+Act[1][3] ---
+Act[4][3] ---
+Act[2][3] Mode[2][3]
 sink ---
 
 objective value = 38
 cpu time = 0.00/1.00(s)
-iteration = 7/5405
+iteration = 5/7998
 
 
 Solutions:
     source   ---     0     0
       sink   ---    38    38
- Act[1][1]   ---     2     8
- Act[1][2] Mode[1][2]     8    19
+ Act[1][1]   ---     3     9
+ Act[1][2] Mode[1][2]    10    20
  Act[1][3]   ---    32    38
  Act[2][1]   ---     0     9
  Act[2][2]   ---     9    13
  Act[2][3] Mode[2][3]    21    32
- Act[3][1]   ---    14    16
+ Act[3][1]   ---     0     3
  Act[3][2]   ---    23    32
  Act[3][3] Express    32    38
- Act[4][1] Mode[4][1]     0     6
+ Act[4][1] Mode[4][1]     2     9
  Act[4][2]   ---    10    23
  Act[4][3]   ---    23    32
-dummy_activity   ---     8     9
+dummy_activity   ---     9     9
 </pre>
 </div>
 </div>
@@ -3558,7 +3561,7 @@ sink ---
 
 objective value = 45
 cpu time = 0.00/1.00(s)
-iteration = 0/3541
+iteration = 1/10272
 
 
 Solutions:
@@ -3705,7 +3708,7 @@ Setup_F,Mode_setup_start_F, 0 0
 --- tardy activity ---
 sink: 100
 --- resource residuals ---
-line1: [0,100] 0 
+line1: [0,150] 0 
 
 --- best activity list ---
 source ---
@@ -3719,7 +3722,7 @@ sink ---
 
 objective value = 100
 cpu time = 0.00/1.00(s)
-iteration = 0/41777
+iteration = 1/42426
 
 
 Solutions:
@@ -4070,7 +4073,7 @@ sink ---
 
 objective value = 1
 cpu time = 0.00/1.00(s)
-iteration = 0/56450
+iteration = 1/87800
 
 
 Solutions:
@@ -4279,92 +4282,6 @@ activity sink duedate 0</code></pre>
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Question_Number</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#ここを変える</span>
-<span class="n">m1</span><span class="o">=</span><span class="n">Model</span><span class="p">()</span>
-<span class="n">duration</span> <span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="mi">2</span> <span class="p">}</span>
-<span class="k">if</span> <span class="n">Question_Number</span> <span class="o">==</span><span class="mi">3</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">duration</span><span class="p">:</span>
-        <span class="n">duration</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="o">-=</span><span class="mi">1</span>
-<span class="k">if</span> <span class="n">Question_Number</span> <span class="o">==</span><span class="mi">1</span><span class="p">:</span>
-    <span class="n">res</span><span class="o">=</span><span class="n">m1</span><span class="o">.</span><span class="n">addResource</span><span class="p">(</span><span class="s2">&quot;worker&quot;</span><span class="p">,</span><span class="n">capacity</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">res</span><span class="o">=</span><span class="n">m1</span><span class="o">.</span><span class="n">addResource</span><span class="p">(</span><span class="s2">&quot;worker&quot;</span><span class="p">,</span><span class="n">capacity</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-
-<span class="n">act</span><span class="o">=</span><span class="p">{}</span>
-<span class="n">mode</span><span class="o">=</span><span class="p">{}</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">duration</span><span class="p">:</span>
-    <span class="n">act</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">m1</span><span class="o">.</span><span class="n">addActivity</span><span class="p">(</span><span class="s2">&quot;Act[</span><span class="si">{0}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
-        <span class="n">mode</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">Mode</span><span class="p">(</span><span class="s2">&quot;Mode[1_1]&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-        <span class="n">mode</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">addResource</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">mode</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">Mode</span><span class="p">(</span><span class="s2">&quot;Mode[1_2]&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-        <span class="n">mode</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">addResource</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-        <span class="n">mode</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">Mode</span><span class="p">(</span><span class="s2">&quot;Mode[1_3]&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">mode</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">addResource</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-        <span class="n">act</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">addModes</span><span class="p">(</span><span class="n">mode</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">mode</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="n">mode</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">mode</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">Mode</span><span class="p">(</span><span class="s2">&quot;Mode[</span><span class="si">{0}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">duration</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">mode</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">addResource</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">act</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">addModes</span><span class="p">(</span><span class="n">mode</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<span class="c1">#temporal (precedense) constraints</span>
-<span class="k">if</span> <span class="n">Question_Number</span> <span class="o">==</span><span class="mi">2</span><span class="p">:</span>
-    <span class="k">pass</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">m1</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">act</span><span class="p">[</span><span class="mi">9</span><span class="p">])</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">):</span>
-        <span class="n">m1</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">act</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">m1</span><span class="o">.</span><span class="n">addTemporal</span><span class="p">(</span><span class="n">act</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">act</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
-
-<span class="n">m1</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">TimeLimit</span><span class="o">=</span><span class="mi">1</span>
-<span class="n">m1</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">Makespan</span><span class="o">=</span><span class="kc">True</span>
-<span class="n">m1</span><span class="o">.</span><span class="n">optimize</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
- ================ Now solving the problem ================ 
-
-
-Solutions:
-    source   ---     0     0
-      sink   ---    12    12
-    Act[1] Mode[1_3]     0     1
-    Act[2]   ---     1     3
-    Act[3]   ---     1     3
-    Act[4]   ---     0     2
-    Act[5]   ---     3     7
-    Act[6]   ---     2     6
-    Act[7]   ---     3     7
-    Act[8]   ---     6    10
-    Act[9]   ---     1    12
-   Act[10]   ---    10    12
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="&#32244;&#32722;&#21839;&#38988;-3&#65306;&#12362;&#23478;&#12434;&#36896;&#12429;&#12358;&#65288;&#25913;&#65289;">&#32244;&#32722;&#21839;&#38988; 3&#65306;&#12362;&#23478;&#12434;&#36896;&#12429;&#12358;&#65288;&#25913;&#65289;<a class="anchor-link" href="#&#32244;&#32722;&#21839;&#38988;-3&#65306;&#12362;&#23478;&#12434;&#36896;&#12429;&#12358;&#65288;&#25913;&#65289;"> </a></h4><p>例題5の資源制約付きスケジューリングの例題に対して，
