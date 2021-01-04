@@ -1,23 +1,15 @@
-resource writer  
- interval 0 inf capacity 1  
 activity Act[1] 
- backward duedate 15  
- weight 1  
- mode  duration 1  
- writer interval 0 inf requirement 1   
+ mode  duration 13   
 activity Act[2] 
- duedate 9  
- weight 1  
- mode  duration 2  
- writer interval 0 inf requirement 1   
+ mode  duration 25   
 activity Act[3] 
- duedate 6  
- weight 1  
- mode  duration 3  
- writer interval 0 inf requirement 1   
+ mode  duration 15   
 activity Act[4] 
- duedate 4  
- weight 1  
- mode  duration 4  
- writer interval 0 inf requirement 1   
-temporal Act[4] Act[1]  type CS delay 0 
+ mode  duration 27   
+activity Act[5] 
+ mode  duration 22   
+temporal Act[1] Act[3]  type CS delay 0  
+temporal Act[2] Act[4]  type CS delay 0  
+temporal Act[2] Act[5]  type CS delay 0  
+temporal Act[3] Act[4]  type CS delay 0  
+activity sink duedate 0 
