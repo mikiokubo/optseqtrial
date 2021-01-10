@@ -31,4 +31,4 @@ sink ---
 
 objective value = 55
 cpu time = 0.00/1.00(s)
-iteration = 1/68445
+iteration = 1/68369
