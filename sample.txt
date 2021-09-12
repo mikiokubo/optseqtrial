@@ -1,0 +1,209 @@
+resource machine[0] interval 0 inf capacity 1
+resource machine[1] interval 0 inf capacity 1
+resource machine[2] interval 0 inf capacity 1
+resource machine[3] interval 0 inf capacity 1
+resource machine[4] interval 0 inf capacity 1
+resource machine[5] interval 0 inf capacity 1
+resource machine[6] interval 0 inf capacity 1
+resource machine[7] interval 0 inf capacity 1
+resource machine[8] interval 0 inf capacity 1
+resource machine[9] interval 0 inf capacity 1
+
+activity job[0][0] 
+	backward duedate start 800 # 開始時刻 <= 800，800-開始時刻 がペナルティ
+	mode duration 29 machine[0] interval 0 inf requirement 1
+activity job[0][1] mode duration 78 machine[1] interval 0 inf requirement 1
+activity job[0][2] mode duration 9 machine[2] interval 0 inf requirement 1
+activity job[0][3] mode duration 36 machine[3] interval 0 inf requirement 1
+activity job[0][4] mode duration 49 machine[4] interval 0 inf requirement 1
+activity job[0][5] mode duration 11 machine[5] interval 0 inf requirement 1
+activity job[0][6] mode duration 62 machine[6] interval 0 inf requirement 1
+activity job[0][7] mode duration 56 machine[7] interval 0 inf requirement 1
+activity job[0][8] mode duration 44 machine[8] interval 0 inf requirement 1
+activity job[0][9] 
+	backward  duedate 800 # 完了時刻 <= 800，800-完了時刻 がペナルティ
+	mode duration 21 machine[9] interval 0 inf requirement 1
+
+activity job[1][0] mode duration 43 machine[0] interval 0 inf requirement 1
+activity job[1][1] mode duration 90 machine[2] interval 0 inf requirement 1
+activity job[1][2] mode duration 75 machine[4] interval 0 inf requirement 1
+activity job[1][3] mode duration 11 machine[9] interval 0 inf requirement 1
+activity job[1][4] mode duration 69 machine[3] interval 0 inf requirement 1
+activity job[1][5] mode duration 28 machine[1] interval 0 inf requirement 1
+activity job[1][6] mode duration 46 machine[6] interval 0 inf requirement 1
+activity job[1][7] mode duration 46 machine[5] interval 0 inf requirement 1
+activity job[1][8] mode duration 72 machine[7] interval 0 inf requirement 1
+activity job[1][9] mode duration 30 machine[8] interval 0 inf requirement 1
+activity job[2][0] mode duration 91 machine[1] interval 0 inf requirement 1
+activity job[2][1] mode duration 85 machine[0] interval 0 inf requirement 1
+activity job[2][2] mode duration 39 machine[3] interval 0 inf requirement 1
+activity job[2][3] mode duration 74 machine[2] interval 0 inf requirement 1
+activity job[2][4] mode duration 90 machine[8] interval 0 inf requirement 1
+activity job[2][5] mode duration 10 machine[5] interval 0 inf requirement 1
+activity job[2][6] mode duration 12 machine[7] interval 0 inf requirement 1
+activity job[2][7] mode duration 89 machine[6] interval 0 inf requirement 1
+activity job[2][8] mode duration 45 machine[9] interval 0 inf requirement 1
+activity job[2][9] mode duration 33 machine[4] interval 0 inf requirement 1
+activity job[3][0] mode duration 81 machine[1] interval 0 inf requirement 1
+activity job[3][1] mode duration 95 machine[2] interval 0 inf requirement 1
+activity job[3][2] mode duration 71 machine[0] interval 0 inf requirement 1
+activity job[3][3] mode duration 99 machine[4] interval 0 inf requirement 1
+activity job[3][4] mode duration 9 machine[6] interval 0 inf requirement 1
+activity job[3][5] mode duration 52 machine[8] interval 0 inf requirement 1
+activity job[3][6] mode duration 85 machine[7] interval 0 inf requirement 1
+activity job[3][7] mode duration 98 machine[3] interval 0 inf requirement 1
+activity job[3][8] mode duration 22 machine[9] interval 0 inf requirement 1
+activity job[3][9] mode duration 43 machine[5] interval 0 inf requirement 1
+activity job[4][0] mode duration 14 machine[2] interval 0 inf requirement 1
+activity job[4][1] mode duration 6 machine[0] interval 0 inf requirement 1
+activity job[4][2] mode duration 22 machine[1] interval 0 inf requirement 1
+activity job[4][3] mode duration 61 machine[5] interval 0 inf requirement 1
+activity job[4][4] mode duration 26 machine[3] interval 0 inf requirement 1
+activity job[4][5] mode duration 69 machine[4] interval 0 inf requirement 1
+activity job[4][6] mode duration 21 machine[8] interval 0 inf requirement 1
+activity job[4][7] mode duration 49 machine[7] interval 0 inf requirement 1
+activity job[4][8] mode duration 72 machine[9] interval 0 inf requirement 1
+activity job[4][9] mode duration 53 machine[6] interval 0 inf requirement 1
+activity job[5][0] mode duration 84 machine[2] interval 0 inf requirement 1
+activity job[5][1] mode duration 2 machine[1] interval 0 inf requirement 1
+activity job[5][2] mode duration 52 machine[5] interval 0 inf requirement 1
+activity job[5][3] mode duration 95 machine[3] interval 0 inf requirement 1
+activity job[5][4] mode duration 48 machine[8] interval 0 inf requirement 1
+activity job[5][5] mode duration 72 machine[9] interval 0 inf requirement 1
+activity job[5][6] mode duration 47 machine[0] interval 0 inf requirement 1
+activity job[5][7] mode duration 65 machine[6] interval 0 inf requirement 1
+activity job[5][8] mode duration 6 machine[4] interval 0 inf requirement 1
+activity job[5][9] mode duration 25 machine[7] interval 0 inf requirement 1
+activity job[6][0] mode duration 46 machine[1] interval 0 inf requirement 1
+activity job[6][1] mode duration 37 machine[0] interval 0 inf requirement 1
+activity job[6][2] mode duration 61 machine[3] interval 0 inf requirement 1
+activity job[6][3] mode duration 13 machine[2] interval 0 inf requirement 1
+activity job[6][4] mode duration 32 machine[6] interval 0 inf requirement 1
+activity job[6][5] mode duration 21 machine[5] interval 0 inf requirement 1
+activity job[6][6] mode duration 32 machine[9] interval 0 inf requirement 1
+activity job[6][7] mode duration 89 machine[8] interval 0 inf requirement 1
+activity job[6][8] mode duration 30 machine[7] interval 0 inf requirement 1
+activity job[6][9] mode duration 55 machine[4] interval 0 inf requirement 1
+activity job[7][0] mode duration 31 machine[2] interval 0 inf requirement 1
+activity job[7][1] mode duration 86 machine[0] interval 0 inf requirement 1
+activity job[7][2] mode duration 46 machine[1] interval 0 inf requirement 1
+activity job[7][3] mode duration 74 machine[5] interval 0 inf requirement 1
+activity job[7][4] mode duration 32 machine[4] interval 0 inf requirement 1
+activity job[7][5] mode duration 88 machine[6] interval 0 inf requirement 1
+activity job[7][6] mode duration 19 machine[8] interval 0 inf requirement 1
+activity job[7][7] mode duration 48 machine[9] interval 0 inf requirement 1
+activity job[7][8] mode duration 36 machine[7] interval 0 inf requirement 1
+activity job[7][9] mode duration 79 machine[3] interval 0 inf requirement 1
+activity job[8][0] mode duration 76 machine[0] interval 0 inf requirement 1
+activity job[8][1] mode duration 69 machine[1] interval 0 inf requirement 1
+activity job[8][2] mode duration 76 machine[3] interval 0 inf requirement 1
+activity job[8][3] mode duration 51 machine[5] interval 0 inf requirement 1
+activity job[8][4] mode duration 85 machine[2] interval 0 inf requirement 1
+activity job[8][5] mode duration 11 machine[9] interval 0 inf requirement 1
+activity job[8][6] mode duration 40 machine[6] interval 0 inf requirement 1
+activity job[8][7] mode duration 89 machine[7] interval 0 inf requirement 1
+activity job[8][8] mode duration 26 machine[4] interval 0 inf requirement 1
+activity job[8][9] mode duration 74 machine[8] interval 0 inf requirement 1
+activity job[9][0] mode duration 85 machine[1] interval 0 inf requirement 1
+activity job[9][1] mode duration 13 machine[0] interval 0 inf requirement 1
+activity job[9][2] mode duration 61 machine[2] interval 0 inf requirement 1
+activity job[9][3] mode duration 7 machine[6] interval 0 inf requirement 1
+activity job[9][4] mode duration 64 machine[8] interval 0 inf requirement 1
+activity job[9][5] mode duration 76 machine[9] interval 0 inf requirement 1
+activity job[9][6] mode duration 47 machine[5] interval 0 inf requirement 1
+activity job[9][7] mode duration 52 machine[3] interval 0 inf requirement 1
+activity job[9][8] mode duration 90 machine[4] interval 0 inf requirement 1
+activity job[9][9] mode duration 45 machine[7] interval 0 inf requirement 1
+
+temporal	job[0][0]_job[0][1]	job[0][0]	job[0][1]
+temporal	job[0][1]_job[0][2]	job[0][1]	job[0][2]
+temporal	job[0][2]_job[0][3]	job[0][2]	job[0][3]
+temporal	job[0][3]_job[0][4]	job[0][3]	job[0][4]
+temporal	job[0][4]_job[0][5]	job[0][4]	job[0][5]
+temporal	job[0][5]_job[0][6]	job[0][5]	job[0][6]
+temporal	job[0][6]_job[0][7]	job[0][6]	job[0][7]
+temporal	job[0][7]_job[0][8]	job[0][7]	job[0][8]
+temporal	job[0][8]_job[0][9]	job[0][8]	job[0][9]
+temporal	job[1][0]_job[1][1]	job[1][0]	job[1][1]
+temporal	job[1][1]_job[1][2]	job[1][1]	job[1][2]
+temporal	job[1][2]_job[1][3]	job[1][2]	job[1][3]
+temporal	job[1][3]_job[1][4]	job[1][3]	job[1][4]
+temporal	job[1][4]_job[1][5]	job[1][4]	job[1][5]
+temporal	job[1][5]_job[1][6]	job[1][5]	job[1][6]
+temporal	job[1][6]_job[1][7]	job[1][6]	job[1][7]
+temporal	job[1][7]_job[1][8]	job[1][7]	job[1][8]
+temporal	job[1][8]_job[1][9]	job[1][8]	job[1][9]
+temporal	job[2][0]_job[2][1]	job[2][0]	job[2][1]
+temporal	job[2][1]_job[2][2]	job[2][1]	job[2][2]
+temporal	job[2][2]_job[2][3]	job[2][2]	job[2][3]
+temporal	job[2][3]_job[2][4]	job[2][3]	job[2][4]
+temporal	job[2][4]_job[2][5]	job[2][4]	job[2][5]
+temporal	job[2][5]_job[2][6]	job[2][5]	job[2][6]
+temporal	job[2][6]_job[2][7]	job[2][6]	job[2][7]
+temporal	job[2][7]_job[2][8]	job[2][7]	job[2][8]
+temporal	job[2][8]_job[2][9]	job[2][8]	job[2][9]
+temporal	job[3][0]_job[3][1]	job[3][0]	job[3][1]
+temporal	job[3][1]_job[3][2]	job[3][1]	job[3][2]
+temporal	job[3][2]_job[3][3]	job[3][2]	job[3][3]
+temporal	job[3][3]_job[3][4]	job[3][3]	job[3][4]
+temporal	job[3][4]_job[3][5]	job[3][4]	job[3][5]
+temporal	job[3][5]_job[3][6]	job[3][5]	job[3][6]
+temporal	job[3][6]_job[3][7]	job[3][6]	job[3][7]
+temporal	job[3][7]_job[3][8]	job[3][7]	job[3][8]
+temporal	job[3][8]_job[3][9]	job[3][8]	job[3][9]
+temporal	job[4][0]_job[4][1]	job[4][0]	job[4][1]
+temporal	job[4][1]_job[4][2]	job[4][1]	job[4][2]
+temporal	job[4][2]_job[4][3]	job[4][2]	job[4][3]
+temporal	job[4][3]_job[4][4]	job[4][3]	job[4][4]
+temporal	job[4][4]_job[4][5]	job[4][4]	job[4][5]
+temporal	job[4][5]_job[4][6]	job[4][5]	job[4][6]
+temporal	job[4][6]_job[4][7]	job[4][6]	job[4][7]
+temporal	job[4][7]_job[4][8]	job[4][7]	job[4][8]
+temporal	job[4][8]_job[4][9]	job[4][8]	job[4][9]
+temporal	job[5][0]_job[5][1]	job[5][0]	job[5][1]
+temporal	job[5][1]_job[5][2]	job[5][1]	job[5][2]
+temporal	job[5][2]_job[5][3]	job[5][2]	job[5][3]
+temporal	job[5][3]_job[5][4]	job[5][3]	job[5][4]
+temporal	job[5][4]_job[5][5]	job[5][4]	job[5][5]
+temporal	job[5][5]_job[5][6]	job[5][5]	job[5][6]
+temporal	job[5][6]_job[5][7]	job[5][6]	job[5][7]
+temporal	job[5][7]_job[5][8]	job[5][7]	job[5][8]
+temporal	job[5][8]_job[5][9]	job[5][8]	job[5][9]
+temporal	job[6][0]_job[6][1]	job[6][0]	job[6][1]
+temporal	job[6][1]_job[6][2]	job[6][1]	job[6][2]
+temporal	job[6][2]_job[6][3]	job[6][2]	job[6][3]
+temporal	job[6][3]_job[6][4]	job[6][3]	job[6][4]
+temporal	job[6][4]_job[6][5]	job[6][4]	job[6][5]
+temporal	job[6][5]_job[6][6]	job[6][5]	job[6][6]
+temporal	job[6][6]_job[6][7]	job[6][6]	job[6][7]
+temporal	job[6][7]_job[6][8]	job[6][7]	job[6][8]
+temporal	job[6][8]_job[6][9]	job[6][8]	job[6][9]
+temporal	job[7][0]_job[7][1]	job[7][0]	job[7][1]
+temporal	job[7][1]_job[7][2]	job[7][1]	job[7][2]
+temporal	job[7][2]_job[7][3]	job[7][2]	job[7][3]
+temporal	job[7][3]_job[7][4]	job[7][3]	job[7][4]
+temporal	job[7][4]_job[7][5]	job[7][4]	job[7][5]
+temporal	job[7][5]_job[7][6]	job[7][5]	job[7][6]
+temporal	job[7][6]_job[7][7]	job[7][6]	job[7][7]
+temporal	job[7][7]_job[7][8]	job[7][7]	job[7][8]
+temporal	job[7][8]_job[7][9]	job[7][8]	job[7][9]
+temporal	job[8][0]_job[8][1]	job[8][0]	job[8][1]
+temporal	job[8][1]_job[8][2]	job[8][1]	job[8][2]
+temporal	job[8][2]_job[8][3]	job[8][2]	job[8][3]
+temporal	job[8][3]_job[8][4]	job[8][3]	job[8][4]
+temporal	job[8][4]_job[8][5]	job[8][4]	job[8][5]
+temporal	job[8][5]_job[8][6]	job[8][5]	job[8][6]
+temporal	job[8][6]_job[8][7]	job[8][6]	job[8][7]
+temporal	job[8][7]_job[8][8]	job[8][7]	job[8][8]
+temporal	job[8][8]_job[8][9]	job[8][8]	job[8][9]
+temporal	job[9][0]_job[9][1]	job[9][0]	job[9][1]
+temporal	job[9][1]_job[9][2]	job[9][1]	job[9][2]
+temporal	job[9][2]_job[9][3]	job[9][2]	job[9][3]
+temporal	job[9][3]_job[9][4]	job[9][3]	job[9][4]
+temporal	job[9][4]_job[9][5]	job[9][4]	job[9][5]
+temporal	job[9][5]_job[9][6]	job[9][5]	job[9][6]
+temporal	job[9][6]_job[9][7]	job[9][6]	job[9][7]
+temporal	job[9][7]_job[9][8]	job[9][7]	job[9][8]
+temporal	job[9][8]_job[9][9]	job[9][8]	job[9][9]
+
+activity sink duedate 0 weight 10000
