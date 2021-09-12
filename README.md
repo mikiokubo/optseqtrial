@@ -19,7 +19,7 @@
  - for Mac 
  > `!chmod +x optseq-mac`  
 
-4. Import package and write a code:> `from optseqtrial.scop import *`
+4. Import package and write a code:> `from optseqtrial.optseq import *`
 5. (Option) Install other packages if necessarily: 
 
 > `!pip install plotly pandas numpy matplotlib`
